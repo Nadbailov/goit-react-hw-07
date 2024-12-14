@@ -1,16 +1,16 @@
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
 import s from "./Contact.module.css";
+import { deleteContact } from "../../redux/contactsOps";
 
 const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
 
   return (
     <div className={s.contact}>
-      <div className={s.info}>
-        <p className={s.name}>{name}</p>
+      <div className={s.list}>
+        <p className={s.info}>{name}</p>
 
-        <a className={s.name} href={number}>
+        <a className={s.info} href={number}>
           {number}
         </a>
       </div>
